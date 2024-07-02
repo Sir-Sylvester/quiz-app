@@ -1,0 +1,39 @@
+html.dark {
+  .background {
+    background: url("../../assets/images/pattern-background-desktop-dark.svg");
+  }
+
+  /* tablet */
+  @media screen and (max-width: 1012px) {
+    .background {
+      background: url("../../assets/images/pattern-background-tablet-dark.svg");
+    }
+  }
+
+  /* mobile */
+  @media screen and (max-width: 640px) {
+    .background {
+      background: url("../../assets/images/pattern-background-mobile-dark.svg");
+    }
+  }
+}
+
+html:not(.dark) {
+  .background {
+    background: url("../../assets/images/pattern-background-desktop-light.svg");
+  }
+
+  /* tablet */
+  @media screen and (max-width: 1012px) {
+    .background {
+      background: url("../../assets/images/pattern-background-tablet-light.svg");
+    }
+  }
+
+  /* mobile */
+  @media screen and (max-width: 640px) {
+    .background {
+      background: url("../../assets/images/pattern-background-mobile-light.svg");
+    }
+  }
+}
