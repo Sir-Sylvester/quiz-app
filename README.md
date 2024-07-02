@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
+![Homepage Light Mode](./src/assets/homepage_lightmode.jpg)
+![Homepage Dark Mode](./src/assets/homepage_darkmode.jpg)
 
 
 ### Links
