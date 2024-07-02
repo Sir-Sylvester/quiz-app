@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  label {
+    @apply h-6 relative inline-block;
+  }
+
+  [type="checkbox"] {
+    @apply w-11 h-0 cursor-pointer inline-block;
+    @apply focus:outline-0 dark:focus:outline-0;
+    @apply border-0 dark:border-0;
+    @apply focus:ring-offset-transparent dark:focus:ring-offset-transparent;
+    @apply focus:ring-transparent dark:focus:ring-transparent;
+    @apply focus-within:ring-0 dark:focus-within:ring-0;
+    @apply focus:shadow-none dark:focus:shadow-none;
+
+    @apply after:absolute before:absolute;
+    @apply after:top-0 before:top-0;
+    @apply after:block before:inline-block;
+    @apply before:rounded-full after:rounded-full;
+
+    @apply after:content-[''] after:w-5 after:h-5 after:mt-0.5 after:ml-0.5;
+    @apply after:shadow-md after:duration-100;
+
+    @apply before:content-[''] before:w-10 before:h-full;
+    @apply before:shadow-[inset_0_0_#000];
+
+    @apply after:bg-white dark:after:bg-gray-50;
+    @apply before:bg-purple dark:before:bg-purple;
+    @apply before:checked:bg-purple dark:before:checked:bg-purple;
+    @apply checked:after:duration-300 checked:after:translate-x-4;
+
+    @apply disabled:after:bg-opacity-75 disabled:cursor-not-allowed;
+    @apply disabled:checked:before:bg-opacity-40;
+  }
+}
+
+@font-face {
+  font-family: "RubikScribble";
+  src: url("/assets/fonts/static/Rubik-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RubikScribbleBold";
+  src: url("/assets/fonts/Rubik-VariableFont_wght.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RubikScribbleItalic";
+  src: url("/assets/fonts/Rubik-Italic-VariableFont_wght.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+
+.input:checked + label .box {
+  @apply group-hover:!text-white;
+  @apply dark:group-hover:text-white;
+  @apply bg-purple text-white;
+  @apply dark:group-hover:text-purple;
+  @apply group-hover:bg-purple;
+}
+
+.input:checked + label .box.show-success {
+  @apply bg-success;
+}
+
+.input:checked + label .box.show-error {
+  @apply bg-red-500;
+}
